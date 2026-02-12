@@ -53,7 +53,7 @@ export const ContactSection = () => {
     };
 
     return (
-        <section id="contact" className="py-32 px-5 md:px-20 relative bg-secondary overflow-hidden">
+        <section id="contact" className="py-32 px-4 md:px-20 relative bg-secondary overflow-hidden">
             <div className="absolute top-1/2 left-0 -translate-y-1/2 size-[40vw] bg-primary/5 rounded-full blur-[120px] -z-0"></div>
 
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">

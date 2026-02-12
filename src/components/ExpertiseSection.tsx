@@ -9,7 +9,7 @@ export const ExpertiseSection = () => {
     ];
 
     return (
-        <section className="py-32 px-5 md:px-20 bg-[#0a0f1a] relative overflow-hidden">
+        <section className="py-32 px-4 md:px-20 bg-[#0a0f1a] relative overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                     <div className="text-center md:text-left">

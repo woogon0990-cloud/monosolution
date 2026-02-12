@@ -54,7 +54,7 @@ export const PricingSection = ({ onConsultationClick }: PricingSectionProps) => 
 
 
     return (
-        <section className="py-32 px-5 md:px-20 bg-[#0a0f1a] relative overflow-hidden">
+        <section className="py-32 px-4 md:px-20 bg-[#0a0f1a] relative overflow-hidden">
             {/* Background Accents */}
             <div className="absolute top-0 right-0 size-[50vw] bg-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
 

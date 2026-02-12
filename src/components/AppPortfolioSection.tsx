@@ -54,13 +54,13 @@ export const AppPortfolioSection = () => {
     };
 
     return (
-        <section className="w-full relative py-10">
+        <section className="w-full relative py-10 px-4">
             <div className="flex flex-col items-center justify-center w-full">
                 <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-8 text-center">
                     APP PORTFOLIO
                 </h3>
 
-                <div className="w-full max-w-[100%] md:max-w-md relative overflow-hidden h-[300px]">
+                <div className="w-[calc(100%-32px)] max-w-[100%] md:max-w-md relative overflow-hidden h-[300px]">
                     <div
                         className="flex transition-transform duration-500 ease-in-out h-full"
                         style={{ transform: `translateX(-${activeIndex * 100}%)` }}

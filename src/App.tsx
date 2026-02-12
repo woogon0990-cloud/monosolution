@@ -196,7 +196,7 @@ const App = () => {
                             onContactClick={() => scrollTo(contactRef)}
                         />
 
-                        <section id="portfolio" ref={portfolioRef} className="py-32 px-5 md:px-20 relative">
+                        <section id="portfolio" ref={portfolioRef} className="py-32 px-4 md:px-20 relative">
                             <div className="max-w-7xl mx-auto">
                                 <div className="mb-24 border-l-[3px] border-primary pl-10">
                                     <h2 className="text-xs font-black text-primary tracking-[0.6em] uppercase mb-4">Portfolio Grid</h2>
