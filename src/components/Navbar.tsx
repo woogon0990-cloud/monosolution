@@ -7,9 +7,10 @@ interface NavbarProps {
     isAdmin: boolean;
     onNavClick: (target: string) => void;
     onConsultationClick: () => void;
+    onConsultationCheck: () => void;
 }
 
-export const Navbar = ({ scrolled, onAdminClick, isAdmin, onNavClick, onConsultationClick }: NavbarProps) => {
+export const Navbar = ({ scrolled, onAdminClick, isAdmin, onNavClick, onConsultationClick, onConsultationCheck }: NavbarProps) => {
     return (
         <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 border-b ${scrolled ? 'bg-secondary/80 backdrop-blur-xl border-white/10 py-4' : 'bg-transparent border-transparent py-6'} px-6 md:px-20`}>
             <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -32,7 +33,7 @@ export const Navbar = ({ scrolled, onAdminClick, isAdmin, onNavClick, onConsulta
                         <span className="material-symbols-outlined text-lg">{isAdmin ? 'logout' : 'admin_panel_settings'}</span>
                         {isAdmin ? '로그아웃' : '관리'}
                     </button>
-                    <button onClick={onConsultationClick} className="text-white font-black hover:text-primary transition-colors tracking-widest text-xs border border-white/20 px-4 py-2 rounded-full hover:bg-white/10 hover:border-white/50">
+                    <button onClick={onConsultationCheck} className="text-white font-black hover:text-primary transition-colors tracking-widest text-xs border border-white/20 px-4 py-2 rounded-full hover:bg-white/10 hover:border-white/50">
                         상담 예약조회
                     </button>
                     <button onClick={onConsultationClick} className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full transition-all shadow-xl shadow-primary/20 active:scale-95">

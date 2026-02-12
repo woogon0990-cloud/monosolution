@@ -1,5 +1,6 @@
 import React from 'react';
 import { REPRESENTATIVE_NUMBER } from '../constants';
+import { AppPortfolioSection } from './AppPortfolioSection';
 
 interface PricingSectionProps {
     onConsultationClick: () => void;
@@ -51,12 +52,8 @@ export const PricingSection = ({ onConsultationClick }: PricingSectionProps) => 
         }
     ];
 
-    const steps = [
-        { num: '01', title: 'Consultation', desc: '요구사항 분석 및 기획', icon: 'chat' },
-        { num: '02', title: 'Planning', desc: 'UI/UX 설계 및 시안', icon: 'architecture' },
-        { num: '03', title: 'Development', desc: '반응형 웹 퍼블리싱', icon: 'code' },
-        { num: '04', title: 'Launch', desc: '검수 및 실서버 배포', icon: 'rocket_launch' }
-    ];
+    // Work Process steps removed
+
 
     return (
         <section className="py-32 px-5 md:px-20 bg-[#0a0f1a] relative overflow-hidden">
@@ -109,26 +106,9 @@ export const PricingSection = ({ onConsultationClick }: PricingSectionProps) => 
                 </div>
 
                 {/* Process Flow */}
+                {/* App Portfolio Slider (Replaces Work Process) */}
                 <div className="mb-32">
-                    <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-12 text-center">작업 진행 절차 (Work Process)</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {steps.map((step, idx) => (
-                            <div key={idx} className="relative p-8 rounded-[2rem] bg-white/5 border border-white/5 flex flex-col items-center text-center hover:bg-white/10 transition-all group">
-                                <div className="size-16 rounded-2xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-xl">
-                                    <span className="material-symbols-outlined text-3xl text-primary">{step.icon}</span>
-                                </div>
-                                <span className="text-[10px] font-black text-slate-600 mb-2 tracking-[0.2em]">{step.num}</span>
-                                <h4 className="text-lg font-bold text-white uppercase tracking-tight mb-2">{step.title}</h4>
-                                <p className="text-xs text-slate-400 font-light">{step.desc}</p>
-
-                                {idx !== steps.length - 1 && (
-                                    <div className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 z-10">
-                                        <span className="material-symbols-outlined text-slate-700">arrow_forward</span>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-                    </div>
+                    <AppPortfolioSection />
                 </div>
 
                 {/* Info Text */}

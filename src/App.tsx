@@ -146,6 +146,14 @@ const App = () => {
         }
     };
 
+    const handleConsultationCheck = () => {
+        if (isAdmin) {
+            setIsDashboardOpen(true);
+        } else {
+            handleAdminToggle();
+        }
+    };
+
     return (
         <div className="min-h-screen bg-[#0a0f1a] selection:bg-primary selection:text-white">
             <Navbar
@@ -158,6 +166,7 @@ const App = () => {
                     if (target === 'contact') scrollTo(contactRef);
                 }}
                 onConsultationClick={() => setIsConsultationOpen(true)}
+                onConsultationCheck={handleConsultationCheck}
             />
 
             <main className="flex-grow">
