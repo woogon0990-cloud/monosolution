@@ -52,8 +52,6 @@ export const PricingSection = ({ onConsultationClick }: PricingSectionProps) => 
         }
     ];
 
-    // Work Process steps removed
-
 
     return (
         <section className="py-32 px-5 md:px-20 bg-[#0a0f1a] relative overflow-hidden">
@@ -105,8 +103,6 @@ export const PricingSection = ({ onConsultationClick }: PricingSectionProps) => 
                     ))}
                 </div>
 
-                {/* Process Flow */}
-                {/* App Portfolio Slider (Replaces Work Process) */}
                 <div className="mb-32">
                     <AppPortfolioSection />
                 </div>

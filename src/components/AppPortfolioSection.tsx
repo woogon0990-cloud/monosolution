@@ -55,12 +55,12 @@ export const AppPortfolioSection = () => {
 
     return (
         <section className="w-full relative py-10">
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center w-full">
                 <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-8 text-center">
-                    App Portfolio <span className="text-primary">Showcase.</span>
+                    APP PORTFOLIO
                 </h3>
 
-                <div className="w-full max-w-sm md:max-w-md relative overflow-hidden h-[300px]">
+                <div className="w-full max-w-[100%] md:max-w-md relative overflow-hidden h-[300px]">
                     <div
                         className="flex transition-transform duration-500 ease-in-out h-full"
                         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -86,8 +86,8 @@ export const AppPortfolioSection = () => {
                             key={idx}
                             onClick={() => handleDotClick(idx)}
                             className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all border ${activeIndex === idx
-                                    ? 'bg-primary text-black border-primary scale-110'
-                                    : 'bg-transparent text-slate-500 border-slate-700 hover:border-slate-500 hover:text-slate-300'
+                                ? 'bg-primary text-black border-primary scale-110'
+                                : 'bg-transparent text-slate-500 border-slate-700 hover:border-slate-500 hover:text-slate-300'
                                 }`}
                         >
                             {String(idx + 1).padStart(2, '0')}
