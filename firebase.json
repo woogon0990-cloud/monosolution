@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "일류전국탁송 (1)",
+    "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
