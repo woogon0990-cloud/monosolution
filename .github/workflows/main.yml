@@ -7,18 +7,11 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 📦 코드 가져오기
-        uses: actions/checkout@v4
-
-      - name: ⚙️ 조립하기 (Build)
-        run: |
-          npm install
-          npm run build -- --skip-type-check
-
-      - name: 🚀 파이어베이스로 배달하기
-        uses: FirebaseExtended/action-hosting-deploy@v0
+      - uses: actions/checkout@v4
+      - run: npm install && npm run build -- --skip-type-check
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MONOSOLUTION_ILLU }}'
           channelId: live
-          projectId: monosolution-illu
+          projectId: monosolution-illu # 👈 여기! 오빠의 '진짜' 프로젝트 ID로 바꾸세요!
