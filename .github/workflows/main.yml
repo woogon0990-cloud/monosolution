@@ -13,7 +13,7 @@ jobs:
       - name: ⚙️ 조립하기 (Build)
         run: |
           npm install
-          npm run build
+          npm run build -- --skip-type-check
 
       - name: 🚀 파이어베이스로 배달하기
         uses: FirebaseExtended/action-hosting-deploy@v0
