@@ -12,13 +12,15 @@ jobs:
 
       - name: ⚙️ 조립하기 (Build)
         run: |
+          cd "일류전국탁송 (1)"  # 👈 로봇을 진짜 코드가 있는 방으로 보냅니다!
           npm install
           npm run build
+          cp -r dist ../  # 👈 조립된 결과물을 배달 가기 편하게 바깥으로 꺼내옵니다!
 
       - name: 🚀 파이어베이스로 배달하기
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MONOSOLUTION_ILLU }}' # 👈 오빠 금고 이름이랑 똑같이 맞췄어요!
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MONOSOLUTION_ILLU }}'
           channelId: live
           projectId: monosolution-illu
